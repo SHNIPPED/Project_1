@@ -1,0 +1,22 @@
+<h2>
+    Projects page
+</h2>
+{{#if Project.length}}
+ <ul>
+    {{#each Project}}
+        <li class="Project">
+            <label >
+                <span>{{Name}}</span>
+                <span>{{Date_Start}}</span>
+                <span>{{Date_End}}</span>
+                <span>{{Students}}</span>
+                <span>{{Note}}</span>
+                <span>{{Photo}}</span>
+                <span>{{Curator}}</span>
+            </label>
+        </li>
+    {{/each}}
+ </ul>
+  {{else}}
+ <p>No projects!</p>
+{{/if}}

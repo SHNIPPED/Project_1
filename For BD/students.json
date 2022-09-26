@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "633184e2dc5f5b2a8dcc8c87"
+  },
+  "Lastname": "Bobovsky",
+  "Name": "Bob",
+  "Surname": "Bobovich"
+},{
+  "_id": {
+    "$oid": "63318977dc5f5b2a8dcc8c91"
+  },
+  "Lastname": "Jonski",
+  "Name": "Jon",
+  "Surname": "Jonovish"
+},{
+  "_id": {
+    "$oid": "633189a0dc5f5b2a8dcc8c94"
+  },
+  "Lastname": "Volk",
+  "Name": "Domir",
+  "Surname": "Volkovich"
+}]

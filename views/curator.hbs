@@ -1,0 +1,21 @@
+ <form action="/curator" method="post">
+    <h2>Curator list</h2>
+
+    <div class="input-field">
+        {{#if curator.length}}
+            <ul>
+                {{#each curator}}
+                    <li class="curator">
+                        <label>
+                            <span >{{Lastname}}</span>
+                            <span >{{Name}}</span>
+                            <span >{{Surname}}</span>
+                        </label>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No tobos!</p>
+        {{/if}}
+    </div>
+ </form>

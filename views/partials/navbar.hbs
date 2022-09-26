@@ -1,0 +1,28 @@
+<nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+
+        {{#if isIndex}}
+          <li class="active"><a href="/">Project</a></li>
+          {{else}}
+         <li ><a href="/">Project</a></li>
+        {{/if}}
+
+        {{#if isCurator}}
+          <li class="active"><a href="/curator">Curator</a></li>
+         {{else}}
+          <li><a href="/curator">Curator</a></li>
+        {{/if}}
+
+        {{#if isStudents}}
+          <li class="active"><a href="/students">Students</a></li>
+          {{else}}
+          <li><a href="/students">Students</a></li>
+        {{/if}}
+
+        
+      </ul>
+    </div>
+  </nav>

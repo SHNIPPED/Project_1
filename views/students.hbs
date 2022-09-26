@@ -1,0 +1,21 @@
+ <form action="/students" method="post">
+    <h2>Students list</h2>
+
+    <div class="input-field">
+        {{#if students.length}}
+            <ul>
+                {{#each students}}
+                    <li class="Students">
+                        <label>
+                            <span>{{Lastname}}</span>
+                            <span>{{Name}}</span>
+                            <span>{{Surname}}</span>
+                        </label>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No students!</p>
+        {{/if}}
+    </div>
+ </form>
