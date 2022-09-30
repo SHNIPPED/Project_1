@@ -1,0 +1,39 @@
+<h2>
+    Projects page
+</h2>
+{{#if Project.length}}
+ <ul>
+    {{#each Project}}
+        <li class="Project">
+            <label >
+                <span>{{Name}}</span>
+                <span>{{Date_Start}}</span>
+                <span>{{Date_End}}</span>
+                <span>{{Students}}</span>
+                <span>{{Note}}</span>
+                <span>{{Photo}}</span>
+                <span>{{Curator}}</span>
+
+                <input class="btn btn-small delete" name="delete" data-id="{{_id}}" type="button" value="Delete">
+                <a class="btn btn-small update" type="button" href="/edit_curator/{{_id}}">Update</a>
+            </label>
+        </li>
+    {{/each}}
+ </ul>
+  <a class="btn btn-small update" type="button" href="/add_curator/{{_id}}">Add</a>
+   <script>
+        document.addEventListener('click', (e) => {
+            const id = e.target?.dataset?.id || null
+            if (id) {
+                fetch(`/curator/${id}`, {
+                    method: 'DELETE',
+                }).then(() => {
+                    window.location.reload();
+                })
+            }
+        })
+    </script>
+  {{else}}
+ <p>No projects!</p>
+  <a class="btn btn-small update" type="button" href="/add_students/{{_id}}">Add</a>
+{{/if}}

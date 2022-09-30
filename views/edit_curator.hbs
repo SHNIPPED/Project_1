@@ -1,0 +1,19 @@
+<form action="/edit_curator/{{curator._id}}?_method=PUT" method="post">
+    <h2>Edit Studnet</h2>
+    <div class="input-field">
+
+        <lable>Lastname</lable>
+        <input type="text" name="Lastname" value="{{curator.Lastname}}">
+
+
+        <lable>Name</lable>
+        <input type="text" name="Name" value="{{curator.Name}}">
+
+
+        <lable>Surname</lable>
+        <input type="text" name="Surname" value="{{curator.Surname}}">
+         
+        <button type="submit" data-id="{{_id}}" class="btn confirm">Confirm</button>
+    </div>
+ </form>
+    <button class="btn cancel" data-id="{{_id}}" onclick="window.location.href='/curator'" VerticalAligment="Righnt">Cancel</button>

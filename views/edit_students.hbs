@@ -1,0 +1,19 @@
+ <form action="/edit_students/{{students._id}}?_method=PUT" method="post">
+    <h2>Edit Studnet</h2>
+    <div class="input-field">
+
+        <lable>Lastname</lable>
+        <input type="text" name="Lastname" value="{{students.Lastname}}">
+
+
+        <lable>Name</lable>
+        <input type="text" name="Name" value="{{students.Name}}">
+
+
+        <lable>Surname</lable>
+        <input type="text" name="Surname" value="{{students.Surname}}">
+         
+        <button type="submit" data-id="{{_id}}" class="btn confirm">Confirm</button>
+    </div>
+ </form>
+    <button class="btn cancel" data-id="{{_id}}" onclick="window.location.href='/students'" VerticalAligment="Righnt">Cancel</button>
