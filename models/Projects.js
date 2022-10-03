@@ -6,11 +6,11 @@ const schema = new Schema({
         required: true
     },
     Date_Start:{
-        type: Date,
+        type: String,
         required: true
     },
     Date_End:{
-        type: Date,
+        type: String,
         required: true
     },
     Note:{

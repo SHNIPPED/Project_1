@@ -1,0 +1,62 @@
+<form action="/edit_project/{{Project._id}}?_method=PUT" method="post">
+    <h2>Edit Project</h2>
+    <div class="input-field">
+
+        <div>
+            <form>
+                <img id="blah" src="{{Project.Photo}}"  alt="your image" style="width: 150px; height: 150px;" />
+                <button id="button" type="button" class="btn confirm">Open</button>
+                <input type='file' id="imgInp" style="display: none;" />
+                <input id="photo" type="text" name="Photo" value="{{Project.Photo}}" style="display: none;">
+            </form>
+        </div>
+
+        <lable>Name</lable>
+        <input type="text" name="Name" value="{{Project.Name}}">
+
+
+        <lable>Date_Start</lable>
+        <input type="text" name="Date_Start" value="{{Project.Date_Start}}">
+
+
+        <lable>Date_End</lable>
+        <input type="text" name="Date_End" value="{{Project.Date_End}}">
+
+        <lable>Note</lable>
+        <input type="text" name="Note" value="{{Project.Note}}">
+
+        <lable>Curator</lable>
+        <input type="text" name="Curator" value="{{Project.Curator}}">
+
+
+        <lable>Students</lable>
+        <input type="text" name="Students" value="{{Project.Students}}">
+
+        <button type="submit" data-id="{{_id}}" class="btn confirm">Confirm</button>
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result),
+                    $('#photo').attr('value', e.target.result)
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('#button').on('click', function () {
+        $("#imgInp").trigger('click');
+        $("#imgInp").change(function () {
+            readURL(this)
+        });
+    });
+
+
+</script>
+<button class="btn cancel" onclick="window.location.href='/'">Cancel</button>

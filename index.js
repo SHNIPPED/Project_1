@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
 const methodOverride = require('method-override')
 const path = require('path')
 const exphnd = require('express-handlebars')
@@ -22,7 +23,8 @@ app.set('views' , 'views')
 
 app.use(express.static(path.join(__dirname,'public')))
 app.use(methodOverride('_method'))
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit: 50000}));
 
 app.use(studentsRoutes)
 app.use(curatorRoutes)
